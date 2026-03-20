@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aligarh Dental Clinic - Trusted Dental Care in Haldwani</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-white: #ffffff;
+            --light-blue: #e3f2fd;
+            --teal: #26a69a;
+            --teal-dark: #00796b;
+            --blue: #2196f3;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+        }
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        .navbar {
+            background: var(--primary-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 0;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--teal-dark) !important;
+        }
+        
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--teal-dark) !important;
+        }
+        
+        .btn-appointment {
+            background: var(--teal);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .btn-appointment:hover {
+            background: var(--teal-dark);
+            transform: translateY(-2px);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--light-blue) 0%, #f5faff 100%);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .service-card {
+            background: var(--primary-white);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            height: 100%;
+            border-top: 4px solid var(--light-blue);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+        
+        .service-card i {
+            font-size: 3rem;
+            color: var(--teal);
+            margin-bottom: 20px;
+        }
+        
+        .service-card h5 {
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-card {
+            background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(38, 166, 154, 0.3);
+        }
+        
+        .testimonial-card {
+            background: var(--primary-white);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--teal);
+        }
+        
+        .stars {
+            color: #ffc107;
+        }
+        
+        .form-control {
+            border-radius: 10px;
+            border: 2px solid #e9ecef;
+            padding: 15px;
+            font-size: 1rem;
+        }
+        
+        .form-control:focus {
+            border-color: var(--teal);
+            box-shadow: 0 0 0 0.2rem rgba(38, 166, 154, 0.25);
+        }
+        
+        .contact-info {
+            background: var(--light-blue);
+            padding: 40px;
+            border-radius: 15px;
+        }
+        
+        .footer {
+            background: var(--text-dark);
+            color: white;
+            padding: 50px 0 30px;
+        }
+        
+        .why-choose-item {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background: var(--primary-white);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            height: 100%;
+            transition: all 0.3s;
+        }
+        
+        .why-choose-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .why-choose-item i {
+            font-size: 3rem;
+            color: var(--teal);
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .section-padding {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#home">
+            <i class="fas fa-tooth me-2"></i>Aligarh Dental Clinic
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item ms-3">
+                    <a class="btn btn-appointment btn-sm" href="#appointment">
+                        <i class="fas fa-calendar-check me-1"></i>Book Appointment
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1>Trusted Dental Care in Haldwani</h1>
+                <p class="lead">Quality treatment, affordable pricing, and patient-first care. Your smile is our priority at Aligarh Dental Clinic.</p>
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                    <a href="#appointment" class="btn btn-appointment btn-lg">
+                        <i class="fas fa-calendar-check me-2"></i>Book Appointment
+                    </a>
+                    <a href="tel:7060665544" class="btn btn-outline-primary btn-lg px-4">
+                        <i class="fas fa-phone me-2"></i>Call Now: 7060665544
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center mt-4 mt-lg-0">
+                <img src="https://images.unsplash.com/photo-1576091160399-1d65cdaa8782?w=600&h=400&fit=crop&crop=center" 
+                     alt="Aligarh Dental Clinic - Professional dental care" class="img-fluid rounded-4 shadow-lg" style="max-height: 400px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about" class="section-padding bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <img src="https://images.unsplash.com/photo-1518980420458-cf75d36d0b5c?w=500&h=500&fit=crop&crop=center" 
+                     alt="Aligarh Dental Clinic interior" class="img-fluid rounded-4 shadow-lg" style="height: 450px; object-fit: cover;">
+            </div>
+            <div class="col-lg-6">
+                <h2 class="display-5 fw-bold mb-4">About Aligarh Dental Clinic</h2>
+                <p class="lead mb-4">
+                    At Aligarh Dental Clinic, patient care comes first. Our clean and hygienic environment ensures your comfort and safety. 
+                    With years of experience serving Haldwani families, we provide reliable dental services you can trust. 
+                    From routine checkups to advanced treatments, our skilled team delivers exceptional care with a personal touch.
+                </p>
+                <div class="d-flex align-items-center">
+                    <div class="bg-teal rounded-circle p-3 me-3">
+                        <i class="fas fa-tooth fs-1 text-white"></i>
+                    </div>
+                    <div>
+                        <h5 class="mb-0">Local Trust in Haldwani</h5>
+                        <p class="mb-0 text-muted">Serving our community with excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section id="services" class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Our Services</h2>
+            <p class="lead text-muted">Comprehensive dental care for all your needs</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <i class="fas fa-tooth"></i>
+                    <h5>General Dentistry</h5>
+                    <p>Regular checkups, fillings, and preventive care</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <i class="fas fa-spray-can-sparkles"></i>
+                    <h5>Teeth Cleaning</h5>
+                    <p>Professional scaling and polishing</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <i class="fas fa-tools"></i>
+                    <h5>Root Canal Treatment</h5>
+                    <p>Painless RCT with latest technology</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <i class="fas fa-prosthesis"></i>
+                    <h5>Dental Implants</h5>
+                    <p>Permanent tooth replacement solutions</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <i class="fas fa-gem"></i>
+                    <h5>Braces & Aligners</h5>
+                    <p>Straighten your smile beautifully</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="service-card">
+                    <i class="fas fa-magic"></i>
+                    <h5>Cosmetic Dentistry</h5>
+                    <p>Smile makeovers and whitening</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- HIGHLIGHTED SERVICES -->
+        <div class="row g-4 mt-5">
+            <div class="col-lg-4 col-md-6">
+                <div class="highlight-card">
+                    <i class="fas fa-crown fs-1 mb-3"></i>
+                    <h4>Best Dentist in Haldwani</h4>
+                    <p class="mb-0 opacity-90">Years of trusted expertise</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="highlight-card">
+                    <i class="fas fa-clinic-medical fs-1 mb-3"></i>
+                    <h4>Best Dental Clinic in Haldwani</h4>
+                    <p class="mb-0 opacity-90">Patient-first approach</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="highlight-card">
+                    <i class="fas fa-dentist fs-1 mb-3"></i>
+                    <h4>Implant Centre in Haldwani</h4>
+                    <p class="mb-0 opacity-90">Advanced implant technology</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why-us" class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">Why Choose Us?</h2>
+            <p class="lead text-muted">Real reasons patients trust Aligarh Dental Clinic</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="why-choose-item">
+                    <i class="fas fa-user-md"></i>
+                    <h5>Experienced Dentist</h5>
+                    <p>Years of specialized training and practice</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="why-choose-item">
+                    <i class="fas fa-rupee-sign"></i>
+                    <h5>Affordable Treatment</h5>
+                    <p>Quality care without compromise on budget</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="why-choose-item">
+                    <i class="fas fa-gem"></i>
+                    <h5>Good Quality Materials</h5>
+                    <p>Premium zirconia and imported materials</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="why-choose-item">
+                    <i class="fas fa-users"></i>
+                    <h5>Friendly Staff</h5>
+                    <p>Caring team that puts you at ease</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="why-choose-item">
+                    <i class="fas fa-spray-can"></i>
+                    <h5>Clean Clinic</h5>
+                    <p>Sterilized equipment and hygienic environment</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- REVIEWS SECTION -->
+<section id="reviews" class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3">What Our Patients Say</h2>
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <div class="stars fs-3 me-3">
+                    ⭐⭐⭐⭐⭐
+                </div>
+                <div>
+                    <h4>4.8 Rating (67 Reviews)</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="stars fs-5 mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="mb-3">"I really appreciate the quality of zirconia at very low price. Excellent service!"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="bg-light rounded-circle p-2 me-3">
+                            <i class="fas fa-user text-muted"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0 fw-bold">T. C. Gupta</h6>
+                            <small class="text-muted">Haldwani Resident</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="testimonial-card">
+                    <div class="stars fs-5 mb-3">⭐⭐⭐⭐⭐</div>
+                    <p class="mb-3">"Wonderful clinic, best experience doctor, well behaved staff, nice service. Highly recommended!"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="bg-light rounded-circle p-2 me-3">
+                            <i class="fas fa-user text-muted"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0 fw-bold">Isika Parwal</h6>
+                            <small class="text-muted">Happy Patient</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-
